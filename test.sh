@@ -1,1 +1,1 @@
-echo "second line"
+echo "SSH is working"
