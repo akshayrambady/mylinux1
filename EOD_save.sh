@@ -3,18 +3,19 @@
 #####
 #This code is to push my edits into git rep by EOD.
 #Author: Akshay.
-#Version: v1.1
+#Version: v1.2
 #Last edited on 30-March
 ###########
 #
-set x
+set -x
+set -e
 
 today=$(date +"%d-%B")
-read -p  "Enter what do did today." EOD_message
+read -p  "Enter what you did today:" EOD_message
 
 git add .
 git commit -m "$today - $EOD_message"
 git pull origin main --rebase
 git push origin main
 
-echo "Succesfully pushed your today's work into git repository"
+echo "✅ Successfully pushed today's work to GitHub "
