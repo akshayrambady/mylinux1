@@ -7,8 +7,8 @@
 #Last edited on 30-March
 ###########
 #
-set -x
 set -e
+set -x
 
 today=$(date +"%d-%B")
 read -p  "Enter what you did today:" EOD_message
@@ -18,4 +18,5 @@ git commit -m "$today - $EOD_message"
 git pull origin main --rebase
 git push origin main
 
+set +x
 echo "✅ Successfully pushed today's work to GitHub "
